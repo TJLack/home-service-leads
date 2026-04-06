@@ -1,0 +1,54 @@
+:root {
+  --deep-blue: #0a2540;
+  --electric-blue: #1e90ff;
+  --gold: #d4af37;
+  --black: #000;
+  --text: #f5f7ff;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #163a5f 0%, #050b14 38%, #000 100%);
+  color: var(--text);
+}
+.container { max-width: 920px; margin: 0 auto; padding: 20px; }
+.card {
+  background: linear-gradient(145deg, rgba(10, 37, 64, 0.88), rgba(6, 16, 28, 0.96));
+  border: 1px solid rgba(30, 144, 255, 0.35);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 0 30px rgba(30, 144, 255, 0.18);
+  margin-bottom: 20px;
+}
+.brand { color: var(--gold); font-weight: 700; letter-spacing: 0.4px; }
+h1 { font-size: clamp(1.8rem, 5vw, 2.8rem); margin: 10px 0; }
+.subhead { color: #d4e5ff; }
+.scan-form { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
+input, button { border-radius: 10px; border: none; padding: 14px; font-size: 1rem; }
+input { flex: 1; min-width: 220px; }
+button { background: linear-gradient(135deg, var(--electric-blue), #2ea2ff); color: white; font-weight: 700; cursor: pointer; }
+button:hover { filter: brightness(1.08); }
+.trust-strip { margin-top: 15px; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; font-size: .92rem; }
+.trust-strip span { background: rgba(30,144,255,.13); border: 1px solid rgba(30,144,255,.35); padding: 8px; border-radius: 8px; text-align: center; }
+.content-block { margin-top: 20px; }
+.hidden { display: none; }
+.loading-item { padding: 7px 0; border-bottom: 1px solid rgba(212,229,255,.15); }
+.loading-item.active { color: var(--gold); }
+.preview-blur { filter: blur(4px); opacity: .65; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; }
+.metric { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.08); border-radius: 12px; padding: 12px; }
+.issue { border-left: 4px solid var(--gold); padding: 10px; background: rgba(255,255,255,.03); border-radius: 6px; margin-bottom: 10px; }
+.cta {
+  margin-top: 20px;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(212,175,55,.45);
+  background: rgba(212,175,55,.08);
+}
+small { color: #9cb6d8; }
+img.report-shot { width: 100%; border-radius: 8px; margin-top: 12px; border: 1px solid rgba(255,255,255,.2); }
+@media (max-width: 640px) {
+  .trust-strip { grid-template-columns: 1fr; }
+}
